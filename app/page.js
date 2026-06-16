@@ -22,7 +22,7 @@ async function getPosts() {
       link: toMobileLink(item.link ?? "#"),
       description: stripHtml(typeof item.description === "string" ? item.description : item.description?.["#text"] ?? "").slice(0, 160),
       pubDate: item.pubDate ?? "",
-    }));app/page.js
+    }));
     return { posts, error: null };
   } catch (e) { return { posts: [], error: String(e) }; }
 }
